@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Küme Espacio Wellness. Centro de belleza en Villa Luro y Cid Campeador. Dermapen, hilos de colágeno, fototerapia, limpiezas faciales, masajes holísticos. Sesiones personalizadas con Flores de Bach.">
+    <meta name="keywords" content="küme wellness, spa villa luro, dermapen, hilos colágeno, fototerapia, masajes holísticos, flores de bach, depilación láser, podoestética">
+    <meta name="author" content="Küme Espacio Wellness">
+    <meta name="robots" content="index, follow">
+
+    <!-- Etiqueta canónica -->
+    <link rel="canonical" href="https://www.kumewellness.com.ar/">
+
+    <!-- Metadatos Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Küme Espacio Wellness | Centro de Belleza en Villa Luro y Cid Campeador">
+    <meta property="og:description" content="Espacio pensado para la nueva energía femenina. Sesiones premium con Flores de Bach, dermapen, hilos de colágeno y más.">
+    <meta property="og:url" content="https://www.kumewellness.com.ar/">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Küme Espacio Wellness">
+    <meta name="twitter:description" content="Tu espacio de bienestar y belleza en Buenos Aires.">
+
+    <!-- Metadatos para dispositivos móviles y PWA -->
+    <meta name="theme-color" content="#688662">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Precargar recursos críticos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Küme Espacio Wellness | Centro de Belleza en Villa Luro y Cid Campeador</title>
+
+    <!-- Fuentes optimizadas - Playfair Display, Cormorant Garamond, Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Schema.org para centro de belleza -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Küme Espacio Wellness",
+      "url": "https://www.kumewellness.com.ar/",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Villa Luro",
+          "addressRegion": "CABA",
+          "addressCountry": "Argentina"
+        },
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Cid Campeador",
+          "addressRegion": "Buenos Aires",
+          "addressCountry": "Argentina"
+        }
+      ],
+      "telephone": "+5491566269356",
+      "email": "unoxuno.kume@gmail.com",
+      "openingHours": ["Mo 10:00-19:00", "Tu 10:00-19:00", "We-Fr 10:00-19:00", "Sa 10:00-19:00"],
+      "description": "Espacio Wellness pensado para mujeres conscientes e innovadoras. Sesiones premium con Flores de Bach.",
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.instagram.com/kume.wellness"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html" title="Küme Espacio Wellness">
+                    <h1 class="logo-text">KÜME</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sesiones">Sesiones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#esteticas">Para Estéticas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reservas">Reservar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                    <!-- Botón de reserva para MÓVIL -->
+                    <a href="#reservas" class="btn btn-primary-wellness d-lg-none">
+                        <i class="bi bi-calendar-check me-2"></i>Reservar Turno
+                    </a>
+                </div>
+                <!-- Botón de reserva para DESKTOP -->
+                <a href="#reservas" class="btn btn-primary-wellness d-none d-lg-block">
+                    <i class="bi bi-calendar-check me-2"></i>Reservar Turno
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Sección Hero -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h2 class="hero-title" style="font-family: 'Playfair Display', serif;">Bienvenidos a<br>KÜME</h2>
+                <p class="hero-subtitle">Espacio Wellness</p>
+                <p class="hero-description" style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+                    Un espacio pensado para mujeres que representan la nueva energía femenina: conscientes, innovadoras, empresarias y comprometidas con su pasión.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#reservas" class="btn btn-hero-primary">
+                        <i class="bi bi-calendar-heart me-2"></i>Reservar Turno
+                    </a>
+                    <a href="#servicios" class="btn btn-hero-secondary">
+                        <i class="bi bi-heart me-2"></i>Ver Servicios
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Nosotros -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <h2 class="section-title text-center" style="font-family: 'Playfair Display', serif;">Sobre Küme</h2>
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="about-content text-center">
+                            <p class="lead" style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; line-height: 1.8; max-width: 900px; margin: 0 auto;">
+                                Küme te invita a vivir la experiencia de las <strong>Flores de Bach</strong> en sesiones premium personalizadas, diseñadas con técnicas profesionales y no invasivas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ubicaciones y horarios -->
+                <div class="row g-4 mt-5">
+                    <div class="col-md-6">
+                        <div class="location-card" style="background: var(--secondary-light); padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                            <i class="bi bi-geo-alt-fill" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                            <h3 style="font-family: 'Playfair Display', serif; color: var(--primary); margin-bottom: 1rem;">Villa Luro</h3>
+                            <p style="font-family: 'Lato', sans-serif; font-size: 1.1rem; margin: 0;">
+                                <strong>Lunes y Sábados</strong><br>
+                                10:00 a 19:00 hs
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="location-card" style="background: var(--secondary-light); padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                            <i class="bi bi-geo-alt-fill" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                            <h3 style="font-family: 'Playfair Display', serif; color: var(--primary); margin-bottom: 1rem;">Cid Campeador</h3>
+                            <p style="font-family: 'Lato', sans-serif; font-size: 1.1rem; margin: 0;">
+                                <strong>Martes</strong><br>
+                                10:00 a 19:00 hs
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Servicios -->
+        <section id="servicios" class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title text-center" style="font-family: 'Playfair Display', serif;">Nuestros Servicios</h2>
+                <p class="section-subtitle text-center" style="font-family: 'Cormorant Garamond', serif;">Tratamientos profesionales y no invasivos</p>
+
+                <div class="row g-4 mt-4">
+                    <!-- Servicio: Dermapen -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-stars"></i>
+                            </div>
+                            <h3 style="font-family: 'Lato', sans-serif;">Dermapen</h3>
+                            <p style="font-family: 'Lato', sans-serif;">Elegí dermapen para suavizar arrugas de la frente, líneas de expresión, bolsas debajo de los ojos, cicatrices de acné, manchas de la edad y poros grandes.</p>
+                            <ul class="service-list" style="font-family: 'Lato', sans-serif;">
+                                <li>Ácido hialurónico</li>
+                                <li>Vitaminas (C y multivitamínico)</li>
+                                <li>Péptidos (argireline)</li>
+                                <li>Colágeno y elastina</li>
+                                <li>Factores de crecimiento</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Servicio: Hilos de Colágeno -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-magic"></i>
+                            </div>
+                            <h3 style="font-family: 'Lato', sans-serif;">Hilos de Colágeno</h3>
+                            <p style="font-family: 'Lato', sans-serif;">Reafirmación, efecto lifting inmediato y estimulación de colágeno natural. Resultados de 12 a 18 meses.</p>
+                            <ul class="service-list" style="font-family: 'Lato', sans-serif;">
+                                <li>Efecto lifting inmediato</li>
+                                <li>Reduce flacidez y arrugas</li>
+                                <li>Mejora rostro, cuello y papada</li>
+                                <li>Resultados duraderos</li>
+                            </ul>
+                            <p style="font-size: 0.85rem; color: #d32f2f; margin-top: 1rem;"><strong>Importante:</strong> No apto para personas celíacas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio: Fototerapia -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-lightbulb-fill"></i>
+                            </div>
+                            <h3 style="font-family: 'Lato', sans-serif;">Fototerapia</h3>
+                            <p style="font-family: 'Lato', sans-serif;">Elegí tu luz según tus necesidades:</p>
+                            <ul class="service-list" style="font-family: 'Lato', sans-serif;">
+                                <li><strong>Roja:</strong> Lifting instantáneo</li>
+                                <li><strong>Azul:</strong> Anti-acné</li>
+                                <li><strong>Verde:</strong> Equilibra y calma</li>
+                                <li><strong>Amarilla:</strong> Pieles sensibles</li>
+                                <li><strong>Púrpura:</strong> Regeneración</li>
+                                <li><strong>Cian:</strong> Aumenta energía</li>
+                                <li><strong>Blanca:</strong> Rejuvenecimiento</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Servicio: Limpiezas Faciales -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-droplet-fill"></i>
+                            </div>
+                            <h3 style="font-family: 'Lato', sans-serif;">Limpiezas Faciales</h3>
+                            <p style="font-family: 'Lato', sans-serif;">Limpieza profunda para extraer impurezas y desinfectar la piel con productos de primera línea Lidherma.</p>
+                            <ul class="service-list" style="font-family: 'Lato', sans-serif;">
+                                <li>Exfoliación profunda</li>
+                                <li>Extracción de impurezas</li>
+                                <li>Máscaras personalizadas</li>
+                                <li>Hidratación 4D</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Servicio: Dermaplaning -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-scissors"></i>
+                            </div>
+                            <h3 style="font-family: 'Lato', sans-serif;">Dermaplaning</h3>
+                            <p style="font-family: 'Lato', sans-serif;">Exfoliación suave que elimina células muertas y vello facial, dejando la piel luminosa y suave.</p>
+                            <ul class="service-list" style="font-family: 'Lato', sans-serif;">
+                                <li>Elimina vello facial</li>
+                                <li>Exfoliación profunda</li>
+                                <li>Mejora absorción de productos</li>
+                                <li>Piel luminosa instantánea</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Servicio: Masajes Holísticos -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-hand-index-thumb"></i>
+                            </div>
+                            <h3 style="font-family: 'Lato', sans-serif;">Masajes Holísticos</h3>
+                            <p style="font-family: 'Lato', sans-serif;">Masajes terapéuticos que integran cuerpo, mente y espíritu para tu bienestar completo.</p>
+                            <ul class="service-list" style="font-family: 'Lato', sans-serif;">
+                                <li>Relajación profunda</li>
+                                <li>Liberación de tensiones</li>
+                                <li>Equilibrio energético</li>
+                                <li>Renovación del espíritu</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Servicio: Podoestética -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-heart-pulse-fill"></i>
+                            </div>
+                            <h3 style="font-family: 'Lato', sans-serif;">Podoestética</h3>
+                            <p style="font-family: 'Lato', sans-serif;">Cuidado profesional de pies con tratamientos especializados.</p>
+                            <ul class="service-list" style="font-family: 'Lato', sans-serif;">
+                                <li>Corte de uñas y exfoliación</li>
+                                <li>Tratamiento de helomas (callos)</li>
+                                <li>Tratamiento de onicomicosis</li>
+                                <li>Uñas encarnadas</li>
+                                <li>Hiperqueratosis</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Servicio: Depilación Láser -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-lightning-charge-fill"></i>
+                            </div>
+                            <h3 style="font-family: 'Lato', sans-serif;">Jornadas de Depilación Láser</h3>
+                            <p style="font-family: 'Lato', sans-serif;">Jornadas especiales de depilación láser con tecnología de última generación.</p>
+                            <ul class="service-list" style="font-family: 'Lato', sans-serif;">
+                                <li>Tecnología avanzada</li>
+                                <li>Resultados duraderos</li>
+                                <li>Tratamiento personalizado</li>
+                                <li>Jornadas a convenir</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sesiones Premium -->
+        <section id="sesiones" class="section-padding">
+            <div class="container">
+                <h2 class="section-title text-center" style="font-family: 'Playfair Display', serif;">Sesiones Premium</h2>
+                <p class="section-subtitle text-center" style="font-family: 'Cormorant Garamond', serif;">Servicios de cosmetología para particulares</p>
+
+                <div class="row g-4 mt-5">
+                    <!-- Sesión Holly -->
+                    <div class="col-lg-6">
+                        <div class="session-card" style="background: linear-gradient(135deg, #fcc0c5 0%, #ebddd7 100%); padding: 3rem; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); height: 100%;">
+                            <div class="text-center mb-4">
+                                <i class="bi bi-heart-fill" style="font-size: 4rem; color: var(--primary);"></i>
+                            </div>
+                            <h3 class="text-center mb-3" style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary);">Sesión Holly</h3>
+                            <p class="text-center mb-4" style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; color: var(--neutral-600);">
+                                (Amor Propio)
+                            </p>
+                            <p style="font-family: 'Lato', sans-serif; font-size: 1.1rem; line-height: 1.8; text-align: center; margin-bottom: 2rem;">
+                                Para pieles deshidratadas o falta de limpieza profunda.<br>
+                                <strong>Porque recuperar el brillo de tu rostro es un acto de amor.</strong>
+                            </p>
+
+                            <div style="background: rgba(255,255,255,0.7); padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
+                                <h4 style="font-family: 'Playfair Display', serif; color: var(--primary); margin-bottom: 1.5rem;">Protocolo:</h4>
+                                <ul style="font-family: 'Lato', sans-serif; line-height: 2;">
+                                    <li>Análisis de la piel</li>
+                                    <li>Hidratación 4D para luminosidad y tersura</li>
+                                    <li>Productos Lidherma de primera línea</li>
+                                    <li>Limpieza, exfoliación, extracciones</li>
+                                    <li>Mascarilla Hyaluronic 4D + Serum H4D</li>
+                                    <li>Fototerapia luz roja 15 minutos</li>
+                                    <li>Cierre con masaje, protector y niacinamida</li>
+                                </ul>
+                            </div>
+
+                            <div class="text-center">
+                                <p style="font-family: 'Lato', sans-serif; font-size: 1rem; margin-bottom: 0.5rem;"><strong>Duración:</strong> 50 minutos</p>
+                                <p style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem;">$55.000</p>
+                                <p style="font-family: 'Lato', sans-serif; font-size: 1.3rem; color: #d32f2f; font-weight: 700;">
+                                    🎉 Promoción Martes VIP: $45.000
+                                </p>
+                            </div>
+
+                            <div style="background: rgba(255,255,255,0.5); padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
+                                <p style="font-family: 'Lato', sans-serif; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+                                    <strong>Términos y condiciones:</strong> Pago efectivo, transferencia o tarjeta (20% recargo). Cambio de agenda hasta 24hs antes. Ubicación Küme VIP (dirección exacta al comprar). Tolerancia de demora 10 minutos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sesión Crabapple -->
+                    <div class="col-lg-6">
+                        <div class="session-card" style="background: linear-gradient(135deg, #d5b690 0%, #688662 100%); padding: 3rem; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); height: 100%; color: white;">
+                            <div class="text-center mb-4">
+                                <i class="bi bi-flower2" style="font-size: 4rem; color: white;"></i>
+                            </div>
+                            <h3 class="text-center mb-3" style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: white;">Sesión Crabapple</h3>
+                            <p class="text-center mb-4" style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; color: rgba(255,255,255,0.9);">
+                                Elimina las toxinas y libera la vergüenza
+                            </p>
+                            <p style="font-family: 'Lato', sans-serif; font-size: 1.1rem; line-height: 1.8; text-align: center; margin-bottom: 2rem; color: rgba(255,255,255,0.95);">
+                                Para pieles con acné, manchas y/o rosácea.<br>
+                                <strong>Porque detrás de todo eso estás vos.</strong>
+                            </p>
+
+                            <div style="background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 15px; margin-bottom: 2rem; backdrop-filter: blur(10px);">
+                                <h4 style="font-family: 'Playfair Display', serif; color: white; margin-bottom: 1.5rem;">Protocolo:</h4>
+                                <ul style="font-family: 'Lato', sans-serif; line-height: 2; color: rgba(255,255,255,0.95);">
+                                    <li>Análisis de la piel</li>
+                                    <li>Productos Lidherma antialérgicos</li>
+                                    <li>Limpieza profunda de impurezas</li>
+                                    <li>Exfoliación, extracciones, desinfección</li>
+                                    <li>Mascarilla purificante</li>
+                                    <li>Fototerapia luz púrpura 15 minutos</li>
+                                    <li>Cierre con masaje y crema para pieles sensibles</li>
+                                </ul>
+                            </div>
+
+                            <div class="text-center">
+                                <p style="font-family: 'Lato', sans-serif; font-size: 1rem; margin-bottom: 0.5rem; color: white;"><strong>Duración:</strong> 50 minutos</p>
+                                <p style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">$60.000</p>
+                                <p style="font-family: 'Lato', sans-serif; font-size: 1.3rem; color: #fcc0c5; font-weight: 700;">
+                                    🎉 Promoción Martes: $52.000
+                                </p>
+                                <p style="font-family: 'Lato', sans-serif; font-size: 0.95rem; margin-top: 1rem; color: rgba(255,255,255,0.9);">
+                                    <em>Para mejores resultados: mínimo 6 sesiones, una vez por semana.</em>
+                                </p>
+                            </div>
+
+                            <div style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
+                                <p style="font-family: 'Lato', sans-serif; font-size: 0.9rem; line-height: 1.6; margin: 0; color: rgba(255,255,255,0.95);">
+                                    <strong>Términos y condiciones:</strong> Pago efectivo, transferencia o tarjeta (20% recargo). Cambio de agenda hasta 24hs antes. Ubicación Küme VIP (dirección exacta al comprar). Tolerancia de demora 10 minutos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Para Estéticas -->
+        <section id="esteticas" class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title text-center" style="font-family: 'Playfair Display', serif;">Servicios para Centros de Estética</h2>
+                <p class="section-subtitle text-center" style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
+                    Küme Espacio Wellness ofrece servicios premium en cosmetología para centros de estética con técnicas no invasivas que se combinan para obtener resultados deseados.
+                </p>
+
+                <div class="row mt-5">
+                    <div class="col-lg-8 mx-auto">
+                        <div style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.1);">
+                            <h3 class="text-center mb-4" style="font-family: 'Playfair Display', serif; color: var(--primary); font-size: 2rem;">¿Qué Provee Küme?</h3>
+
+                            <div class="row g-4 text-center mb-5">
+                                <div class="col-md-3">
+                                    <i class="bi bi-person-check-fill" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                                    <p style="font-family: 'Lato', sans-serif; font-weight: 600;">Profesional</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <i class="bi bi-tools" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                                    <p style="font-family: 'Lato', sans-serif; font-weight: 600;">Equipos</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <i class="bi bi-box-seam-fill" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                                    <p style="font-family: 'Lato', sans-serif; font-weight: 600;">Insumos</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <i class="bi bi-journal-text" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                                    <p style="font-family: 'Lato', sans-serif; font-weight: 600;">Protocolos</p>
+                                </div>
+                            </div>
+
+                            <h4 class="mb-4" style="font-family: 'Playfair Display', serif; color: var(--primary);">Servicios Disponibles:</h4>
+                            <ul style="font-family: 'Lato', sans-serif; font-size: 1.1rem; line-height: 2.2;">
+                                <li><strong>Limpiezas faciales convencionales</strong></li>
+                                <li><strong>Protocolos premium:</strong>
+                                    <ul style="margin-top: 0.5rem;">
+                                        <li>Fototerapia</li>
+                                        <li>Dermaplaning</li>
+                                        <li>Dermapen</li>
+                                        <li>Hilos de colágeno</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Jornadas de depilación láser</strong> (a convenir)</li>
+                            </ul>
+
+                            <div style="background: var(--secondary-light); padding: 2rem; border-radius: 15px; margin-top: 3rem; text-align: center;">
+                                <p style="font-family: 'Lato', sans-serif; font-size: 1.1rem; margin: 0;">
+                                    <strong>La disponibilidad es un acuerdo particular</strong> entre Küme y la estética que contrata el servicio.
+                                </p>
+                                <a href="#contacto" class="btn btn-primary-wellness mt-3" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                                    <i class="bi bi-envelope-fill me-2"></i>Consultar Disponibilidad
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Reservas -->
+        <section id="reservas" class="section-padding">
+            <div class="container">
+                <h2 class="section-title text-center" style="font-family: 'Playfair Display', serif;">Reservá tu Turno</h2>
+                <p class="section-subtitle text-center" style="font-family: 'Cormorant Garamond', serif;">Elegí el día, horario y servicio que prefieras</p>
+
+                <div class="row mt-5">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="reservation-card">
+                            <form id="reservation-form" novalidate>
+                                <!-- Nombre -->
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre completo *</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                    <div class="invalid-feedback">Por favor ingresá tu nombre completo.</div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <div class="invalid-feedback">Por favor ingresá un email válido.</div>
+                                </div>
+
+                                <!-- Teléfono -->
+                                <div class="mb-3">
+                                    <label for="telefono" class="form-label">Teléfono *</label>
+                                    <input type="tel" class="form-control" id="telefono" name="telefono" required placeholder="1566269356">
+                                    <div class="invalid-feedback">Por favor ingresá tu teléfono.</div>
+                                </div>
+
+                                <!-- Ubicación -->
+                                <div class="mb-3">
+                                    <label for="ubicacion" class="form-label">Ubicación *</label>
+                                    <select class="form-select" id="ubicacion" name="ubicacion" required>
+                                        <option value="">Seleccioná una ubicación</option>
+                                        <option value="villa-luro">Villa Luro (Lunes y Sábados)</option>
+                                        <option value="cid-campeador">Cid Campeador (Martes)</option>
+                                    </select>
+                                    <div class="invalid-feedback">Por favor seleccioná una ubicación.</div>
+                                </div>
+
+                                <!-- Servicio -->
+                                <div class="mb-3">
+                                    <label for="servicio" class="form-label">Servicio *</label>
+                                    <select class="form-select" id="servicio" name="servicio" required>
+                                        <option value="">Seleccioná un servicio</option>
+                                        <optgroup label="Sesiones Premium">
+                                            <option value="sesion-holly">Sesión Holly (Amor Propio) - $55.000</option>
+                                            <option value="sesion-crabapple">Sesión Crabapple (Anti-acné) - $60.000</option>
+                                        </optgroup>
+                                        <optgroup label="Tratamientos Faciales">
+                                            <option value="dermapen">Dermapen</option>
+                                            <option value="hilos-colageno">Hilos de Colágeno</option>
+                                            <option value="fototerapia">Fototerapia</option>
+                                            <option value="limpiezas">Limpiezas Faciales</option>
+                                            <option value="dermaplaning">Dermaplaning</option>
+                                        </optgroup>
+                                        <optgroup label="Otros Servicios">
+                                            <option value="masajes">Masajes Holísticos</option>
+                                            <option value="podoestetica">Podoestética</option>
+                                            <option value="depilacion-laser">Depilación Láser</option>
+                                        </optgroup>
+                                    </select>
+                                    <div class="invalid-feedback">Por favor seleccioná un servicio.</div>
+                                </div>
+
+                                <!-- Fecha -->
+                                <div class="mb-3">
+                                    <label for="fecha" class="form-label">Fecha *</label>
+                                    <input type="date" class="form-control" id="fecha" name="fecha" required>
+                                    <div class="invalid-feedback">Por favor seleccioná una fecha.</div>
+                                </div>
+
+                                <!-- Horario -->
+                                <div class="mb-3">
+                                    <label for="horario" class="form-label">Horario *</label>
+                                    <select class="form-select" id="horario" name="horario" required>
+                                        <option value="">Seleccioná un horario</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="19:00">19:00</option>
+                                    </select>
+                                    <div class="invalid-feedback">Por favor seleccioná un horario.</div>
+                                </div>
+
+                                <!-- Comentarios adicionales -->
+                                <div class="mb-3">
+                                    <label for="comentarios" class="form-label">Comentarios adicionales</label>
+                                    <textarea class="form-control" id="comentarios" name="comentarios" rows="3" placeholder="¿Tenés alguna consulta o necesidad especial?"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary-wellness btn-lg w-100">
+                                    <i class="bi bi-check-circle me-2"></i>Confirmar Reserva
+                                </button>
+
+                                <!-- Spinner de carga -->
+                                <div id="spinner" class="spinner-container hidden">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">Procesando reserva...</span>
+                                    </div>
+                                    <span class="spinner-text">Enviando tu reserva...</span>
+                                </div>
+
+                                <!-- Mensajes de feedback -->
+                                <div id="form-feedback" class="form-feedback mt-3"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title text-center" style="font-family: 'Playfair Display', serif;">Contacto</h2>
+                <div class="row g-4 mt-4">
+                    <div class="col-md-4 text-center">
+                        <div class="contact-item">
+                            <i class="bi bi-whatsapp"></i>
+                            <h5 style="font-family: 'Lato', sans-serif;">WhatsApp</h5>
+                            <p style="font-family: 'Lato', sans-serif;"><a href="https://wa.me/5491566269356">+54 9 15 6626-9356</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <h5 style="font-family: 'Lato', sans-serif;">Email</h5>
+                            <p style="font-family: 'Lato', sans-serif;"><a href="mailto:unoxuno.kume@gmail.com">unoxuno.kume@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="contact-item">
+                            <i class="bi bi-instagram"></i>
+                            <h5 style="font-family: 'Lato', sans-serif;">Instagram</h5>
+                            <p style="font-family: 'Lato', sans-serif;"><a href="https://www.instagram.com/kume.wellness" target="_blank" rel="noopener noreferrer">@kume.wellness</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5491566269356?text=Hola!%20Quiero%20consultar%20sobre%20los%20servicios%20de%20Küme%20Wellness"
+       class="whatsapp-float"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp con Küme Wellness"
+       title="¡Hablemos por WhatsApp!">
+        <div class="whatsapp-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+        </div>
+        <span class="whatsapp-tooltip">¡Chatea con nosotros!</span>
+    </a>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 style="font-family: 'Playfair Display', serif;">Küme Wellness</h4>
+                    <p style="font-family: 'Cormorant Garamond', serif;">Espacio pensado para la nueva energía femenina.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 style="font-family: 'Playfair Display', serif;">Horarios</h4>
+                    <p style="font-family: 'Lato', sans-serif;"><i class="bi bi-clock-fill"></i> <strong>Villa Luro:</strong> Lunes y Sábados 10-19hs</p>
+                    <p style="font-family: 'Lato', sans-serif;"><i class="bi bi-clock-fill"></i> <strong>Cid Campeador:</strong> Martes 10-19hs</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 style="font-family: 'Playfair Display', serif;">Seguinos</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/kume.wellness" target="_blank" rel="noopener noreferrer" aria-label="Instagram Küme Wellness">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p style="font-family: 'Lato', sans-serif;">Derechos de autor © Küme Espacio Wellness <span id="current-year">2025</span>. Buenos Aires, Argentina.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS personalizado -->
+    <script src="js/main.js"></script>
+</body>
+</html>
