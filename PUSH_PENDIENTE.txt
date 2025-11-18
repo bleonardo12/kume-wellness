@@ -1,0 +1,40 @@
+================================================================================
+COMMITS PENDIENTES DE SUBIR A GITHUB
+================================================================================
+
+Hay 2 commits guardados LOCALMENTE que necesitan subirse a GitHub:
+
+1. Configurar EmailJS con credenciales de Küme Wellness
+   - Service ID: service_80uvbj8
+   - Template ID: template_5v3rbkp
+   - Public Key: DYrv4LzEcVpHILHNa
+   - Email: unoxuno.kume@gmail.com
+
+2. Actualizar dominio de kumewellness.com.ar a espaciokume.com.ar
+   - Canonical URL actualizado
+   - Open Graph URL actualizado
+   - Schema.org URL actualizado
+
+================================================================================
+PARA SUBIR LOS CAMBIOS A GITHUB (cuando quieras):
+================================================================================
+
+Abre Git Bash y ejecuta:
+
+cd /d/EXTRA/PaginasWeb/kume-wellness
+git checkout claude/kume-page-improvements-01XXKXkR3cNQHfE3vcAmv6Qr
+git push origin claude/kume-page-improvements-01XXKXkR3cNQHfE3vcAmv6Qr
+git checkout main
+git merge claude/kume-page-improvements-01XXKXkR3cNQHfE3vcAmv6Qr
+git push origin main
+
+================================================================================
+IMPORTANTE:
+================================================================================
+
+✅ Tus archivos LOCALES están COMPLETOS y listos para usar
+✅ Puedes subir al VPS SIN problemas con los archivos actuales
+✅ El push a GitHub puede esperar - no es urgente
+✅ Los archivos locales tienen TODO lo necesario para producción
+
+================================================================================
