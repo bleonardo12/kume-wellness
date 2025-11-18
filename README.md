@@ -364,7 +364,7 @@ Edita el array de horarios en `index.html` (líneas 356-369):
 
 - [ ] Agregar logo profesional
 - [ ] Tomar fotos del local y tratamientos
-- [ ] Configurar dominio personalizado (ejemplo: kumewellness.com.ar)
+- [ ] Configurar dominio personalizado (ejemplo: espaciokume.com.ar)
 - [ ] Agregar sistema de cancelación de turnos
 - [ ] Integrar calendario de disponibilidad en tiempo real
 - [ ] Agregar testimonios de clientes

@@ -54,7 +54,7 @@ Buscar y reemplazar en `index.html`:
 2. Arrastrar la carpeta `kume-wellness` completa
 3. ¡Listo! Tu sitio estará online con una URL tipo: `https://tu-sitio-123.netlify.app`
 
-**Más adelante** podes configurar un dominio personalizado (ej: kumewellness.com.ar)
+**Más adelante** podes configurar un dominio personalizado (ej: espaciokume.com.ar)
 
 ---
 
