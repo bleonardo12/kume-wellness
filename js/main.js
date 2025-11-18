@@ -1,12 +1,11 @@
 // ========== KÜME WELLNESS - MAIN JS ==========
 
 // Configuración de EmailJS
-// IMPORTANTE: Reemplaza estos valores con tus credenciales de EmailJS
-// Tutorial completo: https://www.emailjs.com/docs/
+// Credenciales configuradas para Küme Wellness
 const EMAILJS_CONFIG = {
-    serviceID: 'TU_SERVICE_ID',      // Reemplazar con tu Service ID
-    templateID: 'TU_TEMPLATE_ID',    // Reemplazar con tu Template ID
-    publicKey: 'TU_PUBLIC_KEY'       // Reemplazar con tu Public Key
+    serviceID: 'service_80uvbj8',
+    templateID: 'template_5v3rbkp',
+    publicKey: 'DYrv4LzEcVpHILHNa'
 };
 
 // Inicializar EmailJS cuando cargue el DOM
@@ -169,7 +168,8 @@ function initReservationForm() {
             horario: formData.horario,
             comentarios: formData.comentarios,
             // Estos parámetros son para el email que te llega a vos (dueño del negocio)
-            admin_email: 'tucorreo@gmail.com'      // REEMPLAZAR con tu email
+            admin_email: 'unoxuno.kume@gmail.com',
+            ubicacion: document.getElementById('ubicacion').selectedOptions[0].text
         };
 
         // Mostrar spinner
@@ -243,14 +243,30 @@ function initReservationForm() {
 // Helper function para obtener nombre del servicio formateado
 function getServiceName(servicioValue) {
     const servicios = {
-        'sesion-holly': 'Sesión Holly (Amor Propio) - $55.000',
-        'sesion-crabapple': 'Sesión Crabapple (Anti-acné) - $60.000',
+        // Sesiones Premium
+        'sesion-holly': 'Sesión Holly (Amor Propio)',
+        'sesion-crabapple': 'Sesión Crabapple (Anti-acné)',
+        'sesion-olive': 'Sesión Olive (Dermapen +50)',
+        'sesion-star': 'Renovación Celular Star Of Bethlehem',
+        'peeling-algas': 'Peeling de Algas Vegano Rescue Remedy',
+        'anti-age-larch': 'Anti Age Wellness Larch',
+        // Masajes y Terapias
+        'masajes-holisticos': 'Masajes Holísticos',
+        'masajes-descontracturantes': 'Masajes Descontracturantes',
+        'flores-bach': 'Flores de Bach',
+        // Programas Especiales
+        'mamas-armonia-combinadas': 'Mamás en Armonía - Sesiones Combinadas',
+        'mamas-armonia-cosmetologia': 'Mamás en Armonía - Cosmetología',
+        'mamas-armonia-peeling': 'Mamás en Armonía - Peeling Algas',
+        'mamas-armonia-masajes': 'Mamás en Armonía - Masajes',
+        'estrias': 'Tratamiento de Estrías Mimulus',
+        // Tratamientos Faciales
         'dermapen': 'Dermapen',
         'hilos-colageno': 'Hilos de Colágeno',
         'fototerapia': 'Fototerapia',
         'limpiezas': 'Limpiezas Faciales',
         'dermaplaning': 'Dermaplaning',
-        'masajes': 'Masajes Holísticos',
+        // Otros Servicios
         'podoestetica': 'Podoestética',
         'depilacion-laser': 'Jornadas de Depilación Láser'
     };
