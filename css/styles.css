@@ -472,8 +472,21 @@ nav.navbar.scrolled {
     transition: all var(--transition-normal);
 }
 
+/* Cuando service-icon contiene una imagen */
+.service-icon:has(img) {
+    background: transparent;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
 .service-card:hover .service-icon {
     transform: scale(1.1) rotate(5deg);
+}
+
+/* Evitar rotación en imágenes PNG */
+.service-card:hover .service-icon:has(img) {
+    transform: scale(1.05);
 }
 
 .service-icon i {
