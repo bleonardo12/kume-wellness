@@ -478,6 +478,15 @@ nav.navbar.scrolled {
     width: 100%;
     height: auto;
     border-radius: 0;
+    overflow: hidden;
+}
+
+/* Aplicar border-radius a las imágenes dentro de service-icon */
+.service-icon img {
+    border-radius: 50% !important;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 .service-card:hover .service-icon {
