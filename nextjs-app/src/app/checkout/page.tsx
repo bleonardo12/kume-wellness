@@ -82,10 +82,30 @@ export default function CheckoutPage() {
       const orderId = result.orderId;
 
       if (formData.paymentMethod === 'mercadopago') {
-        // TODO: Redirigir a MercadoPago con orderId
+        // Crear preferencia de pago en MercadoPago
+        const mpResponse = await fetch('/api/mercadopago/create-preference', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            orderId,
+            items: orderData.items,
+            payer: orderData.customer,
+            total,
+          }),
+        });
+
+        const mpResult = await mpResponse.json();
+
+        if (!mpResponse.ok) {
+          throw new Error(mpResult.error || 'Error al crear pago');
+        }
+
         toast.success('Redirigiendo a MercadoPago...');
         clearCart();
-        router.push(`/checkout/success?order=${orderId}`);
+
+        // Redirigir a MercadoPago
+        window.location.href = mpResult.initPoint;
+        return;
       } else {
         // Transferencia o efectivo
         toast.success('Pedido confirmado! Te contactaremos pronto.');
