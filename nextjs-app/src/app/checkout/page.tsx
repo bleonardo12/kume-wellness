@@ -46,9 +46,6 @@ export default function CheckoutPage() {
     setIsLoading(true);
 
     try {
-      // TODO: Integrar con API de MercadoPago
-      // Por ahora, simular proceso de pago
-
       const orderData = {
         items: items.map(item => ({
           serviceId: item.service.id,
@@ -69,22 +66,31 @@ export default function CheckoutPage() {
         comments: formData.comments,
       };
 
-      console.log('Order data:', orderData);
+      // Crear orden en base de datos
+      const response = await fetch('/api/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(orderData),
+      });
 
-      // Simular delay de procesamiento
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Error al crear la orden');
+      }
+
+      const orderId = result.orderId;
 
       if (formData.paymentMethod === 'mercadopago') {
-        // TODO: Redirigir a MercadoPago
+        // TODO: Redirigir a MercadoPago con orderId
         toast.success('Redirigiendo a MercadoPago...');
-        // Por ahora mostrar éxito
         clearCart();
-        router.push('/checkout/success');
+        router.push(`/checkout/success?order=${orderId}`);
       } else {
         // Transferencia o efectivo
         toast.success('Pedido confirmado! Te contactaremos pronto.');
         clearCart();
-        router.push('/checkout/success');
+        router.push(`/checkout/success?order=${orderId}`);
       }
     } catch (error) {
       toast.error('Error al procesar el pedido');
