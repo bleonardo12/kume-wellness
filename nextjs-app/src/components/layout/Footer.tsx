@@ -31,11 +31,11 @@ export default function Footer() {
             <ul className="space-y-3 text-gray-400 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>Villa Luro - CABA<br />Lun a Vie 9-20hs, Sáb 9-14hs</span>
+                <span>Villa Luro - CABA<br />Jue 13-20hs, Sáb 10-17hs</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>Cid Campeador - CABA<br />Lun a Vie 9-20hs</span>
+                <span>Cid Campeador - CABA</span>
               </li>
             </ul>
           </div>

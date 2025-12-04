@@ -4,17 +4,18 @@ import { services, getServicesByCategory } from '@/data/services';
 import ServiceCard from '@/components/services/ServiceCard';
 import { useState } from 'react';
 
-type Category = 'all' | 'premium' | 'facial' | 'masajes' | 'especial';
+type Category = 'all' | 'facial' | 'premium' | 'masajes' | 'corporales' | 'especial';
 
 export default function Services() {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
 
   const categories: { key: Category; label: string }[] = [
     { key: 'all', label: 'Todos' },
-    { key: 'premium', label: 'Sesiones Premium' },
-    { key: 'facial', label: 'Faciales' },
+    { key: 'facial', label: 'Cosmetología' },
+    { key: 'premium', label: 'Premium' },
     { key: 'masajes', label: 'Masajes' },
-    { key: 'especial', label: 'Especiales' },
+    { key: 'corporales', label: 'Corporales' },
+    { key: 'especial', label: 'Programas Especiales' },
   ];
 
   const filteredServices = activeCategory === 'all'

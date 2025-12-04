@@ -7,7 +7,7 @@ export interface Service {
   shortDescription: string;
   price: number;
   discountPrice?: number;
-  category: 'facial' | 'premium' | 'masajes' | 'especial';
+  category: 'facial' | 'premium' | 'masajes' | 'corporales' | 'especial';
   features: string[];
   duration?: string;
   image?: string;
