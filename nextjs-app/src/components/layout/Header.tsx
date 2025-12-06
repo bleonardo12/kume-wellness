@@ -1,14 +1,19 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, ShoppingCart } from 'lucide-react';
 import { useCartStore } from '@/store/cart-store';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { toggleCart, getItemCount } = useCartStore();
   const itemCount = getItemCount();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const navLinks = [
     { href: '#sobre-nosotros', label: 'Sobre Nosotros' },
@@ -44,7 +49,7 @@ export default function Header() {
               className="relative p-2 text-gray-700 hover:text-primary transition-colors"
             >
               <ShoppingCart className="w-6 h-6" />
-              {itemCount > 0 && (
+              {mounted && itemCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-accent text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                   {itemCount}
                 </span>
@@ -66,7 +71,7 @@ export default function Header() {
               className="relative p-2 text-gray-700"
             >
               <ShoppingCart className="w-6 h-6" />
-              {itemCount > 0 && (
+              {mounted && itemCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-accent text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                   {itemCount}
                 </span>
