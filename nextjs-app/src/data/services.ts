@@ -108,7 +108,7 @@ export const services: Service[] = [
     description: 'Terapia a base de cremas neutras con Flores de Bach. Armonía para el cuerpo físico a través de masajes y equilibrio energético. Combina masajes relajantes, descontracturantes y armonización energética. Integra técnicas conocidas y fundamentadas para un completo alivio del cuerpo físico y emocional. Flores de Bach: Rescue Remedy.',
     shortDescription: 'Relajación + equilibrio energético',
     price: 65000,
-    discountPrice: 52900,
+    discountPrice: 52000,
     category: 'masajes',
     features: ['Relajante + descontracturante', 'Armonización energética', 'Flores de Bach: Rescue Remedy'],
     duration: '60 min'

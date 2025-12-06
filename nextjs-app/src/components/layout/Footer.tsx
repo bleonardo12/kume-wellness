@@ -31,7 +31,11 @@ export default function Footer() {
             <ul className="space-y-3 text-gray-400 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>Villa Luro - CABA<br />Jue 13-20hs, Sáb 10-17hs</span>
+                <span>Villa Luro - CABA</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                <span>Villa Luro - CABA</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
@@ -45,7 +49,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Contacto</h4>
             <ul className="space-y-3 text-gray-400">
               <li>
-                <a href="https://wa.me/5491112345678" className="flex items-center gap-2 hover:text-white">
+                <a href="https://wa.me/5491166269356" className="flex items-center gap-2 hover:text-white">
                   <Phone className="w-4 h-4" />
                   WhatsApp
                 </a>
