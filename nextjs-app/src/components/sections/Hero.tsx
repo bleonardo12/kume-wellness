@@ -2,19 +2,21 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-secondary via-white to-accent/20 pt-20">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-secondary via-white to-accent/20 pt-32 md:pt-40">
       <div className="container mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-6">
+        <h1 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-8">
           Küme Espacio Wellness
           <span className="block text-primary mt-2">Bienestar Integral</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-          Küme Espacio Wellness nace de la pasión por el bienestar integral y la búsqueda constante de la excelencia.
-          Nos renovamos para ofrecerte una experiencia única que fusiona lo mejor de la estética contemporánea con el
-          cuidado profundo de tu salud y equilibrio personal. En Küme creemos que la belleza auténtica surge cuando
-          cuerpo, mente y espíritu se encuentran en armonía.
-        </p>
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 max-w-4xl mx-auto mb-8 shadow-lg">
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+            Küme Espacio Wellness nace de la pasión por el bienestar integral y la búsqueda constante de la excelencia.
+            Nos renovamos para ofrecerte una experiencia única que fusiona lo mejor de la estética contemporánea con el
+            cuidado profundo de tu salud y equilibrio personal. En Küme creemos que la belleza auténtica surge cuando
+            cuerpo, mente y espíritu se encuentran en armonía.
+          </p>
+        </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <Link
@@ -32,20 +34,31 @@ export default function Hero() {
         </div>
 
         {/* Enfoque Integral */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto mb-8 text-left">
-          <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">Nuestro Enfoque Integral</h2>
-          <p className="text-gray-700 mb-4">
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 max-w-4xl mx-auto mb-8 text-left shadow-lg">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">Nuestro Enfoque Integral</h2>
+          <p className="text-gray-700 mb-4 leading-relaxed">
             Integramos técnicas no invasivas de última generación, aparatología avanzada y terapias tradicionales de
             probada eficacia para brindarte resultados visibles y duraderos. Cada tratamiento es diseñado de manera
             personalizada, respetando tu individualidad y tus objetivos.
           </p>
-          <p className="text-gray-700">
+          <p className="text-gray-700 leading-relaxed">
             Ampliamos la mirada de la nueva estética: no solo transformamos, sino que cuidamos y potenciamos tu
             bienestar desde adentro hacia afuera.
           </p>
         </div>
 
-        {/* Experiencia */}
+        {/* Experiencia que respalda */}
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 max-w-4xl mx-auto mb-8 text-left shadow-lg">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">Experiencia que Respalda</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Con más de 13 años de trayectoria, nuestro equipo de profesionales altamente capacitados te acompaña en cada
+            paso de tu camino hacia el bienestar. La experiencia acumulada, la formación continua y el compromiso genuino
+            con cada persona que nos visita son los pilares que nos definen. Te invitamos a sentir Küme: un espacio donde
+            la excelencia, la calidez y los resultados se encuentran.
+          </p>
+        </div>
+
+        {/* Estadísticas */}
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 text-center">
             <div className="text-3xl font-bold text-primary mb-2">13+</div>
