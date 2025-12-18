@@ -32,8 +32,7 @@ export default function CheckoutPage() {
   };
 
   const subtotal = getTotal();
-  const cardSurcharge = formData.paymentMethod === 'mercadopago' ? subtotal * 0.20 : 0;
-  const total = subtotal + cardSurcharge;
+  const total = subtotal;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,7 +60,7 @@ export default function CheckoutPage() {
         location: formData.location,
         paymentMethod: formData.paymentMethod,
         subtotal,
-        surcharge: cardSurcharge,
+        surcharge: 0,
         total,
         comments: formData.comments,
       };
@@ -229,10 +228,7 @@ export default function CheckoutPage() {
                       className="text-primary"
                     />
                     <CreditCard className="w-5 h-5 text-gray-600" />
-                    <div>
-                      <span className="font-medium">MercadoPago</span>
-                      <span className="text-xs text-accent ml-2">(+20% recargo)</span>
-                    </div>
+                    <span className="font-medium">MercadoPago</span>
                   </label>
 
                   <label className={`flex items-center gap-3 p-3 border rounded-lg cursor-pointer transition-colors ${
@@ -318,22 +314,16 @@ export default function CheckoutPage() {
               </div>
 
               <div className="space-y-2 pt-4 border-t">
-                <div className="flex justify-between text-gray-600">
-                  <span>Subtotal</span>
-                  <span>{formatPrice(subtotal)}</span>
-                </div>
-
-                {cardSurcharge > 0 && (
-                  <div className="flex justify-between text-accent">
-                    <span>Recargo tarjeta (20%)</span>
-                    <span>{formatPrice(cardSurcharge)}</span>
-                  </div>
-                )}
-
-                <div className="flex justify-between text-lg font-bold pt-2 border-t">
+                <div className="flex justify-between text-lg font-bold">
                   <span>Total</span>
                   <span className="text-primary">{formatPrice(total)}</span>
                 </div>
+
+                {(formData.paymentMethod === 'transfer' || formData.paymentMethod === 'cash') && (
+                  <p className="text-xs text-gray-600 text-center pt-2">
+                    💰 <span className="font-semibold">15% de descuento</span> aplicable en efectivo o transferencia bancaria
+                  </p>
+                )}
               </div>
             </div>
 
