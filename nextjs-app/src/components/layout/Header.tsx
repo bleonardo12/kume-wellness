@@ -91,7 +91,7 @@ export default function Header() {
                 <ChevronDown className="w-4 h-4" />
               </button>
               {openDropdown === 'servicios' && (
-                <div className="absolute top-full left-0 mt-2 w-72 bg-white shadow-2xl rounded-lg overflow-hidden">
+                <div className="absolute top-full left-0 mt-0 w-72 bg-white shadow-2xl rounded-lg overflow-hidden">
                   {servicios.map((categoria) => (
                     <div key={categoria.id} className="border-b border-gray-100 last:border-0">
                       <button
@@ -132,7 +132,7 @@ export default function Header() {
                 <ChevronDown className="w-4 h-4" />
               </button>
               {openDropdown === 'wellness' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-2xl rounded-lg py-2">
+                <div className="absolute top-full left-0 mt-0 w-64 bg-white shadow-2xl rounded-lg py-2">
                   {serviciosWellness.map((item) => (
                     <Link
                       key={item.label}
