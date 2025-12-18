@@ -9,12 +9,12 @@ export default function Hero() {
           <span className="block text-primary mt-2">Bienestar Integral</span>
         </h1>
 
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 max-w-4xl mx-auto mb-8 shadow-lg">
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            Küme Espacio Wellness nace de la pasión por el bienestar integral y la búsqueda constante de la excelencia.
-            Nos renovamos para ofrecerte una experiencia única que fusiona lo mejor de la estética contemporánea con el
-            cuidado profundo de tu salud y equilibrio personal. En Küme creemos que la belleza auténtica surge cuando
-            cuerpo, mente y espíritu se encuentran en armonía.
+        <div className="bg-gradient-to-r from-primary/90 to-accent/90 backdrop-blur-sm rounded-3xl p-8 md:p-10 max-w-4xl mx-auto mb-8 shadow-2xl border-2 border-white/20">
+          <p className="text-lg md:text-xl text-white leading-relaxed font-medium">
+            Küme.wellness es un espacio de estética que te invita a vivir una experiencia integral y única en el cuidado tu piel, en sesiones premium personalizadas y diseñadas con técnicas profesionales, no invasivas, para el rostro y el cuerpo. Contamos con profesionales de mucha experiencia en el bienestar del cuerpo físico y emocional.
+          </p>
+          <p className="text-lg md:text-xl text-white leading-relaxed font-semibold mt-4">
+            Especialistas en el sistema Flores de Bach.
           </p>
         </div>
 
