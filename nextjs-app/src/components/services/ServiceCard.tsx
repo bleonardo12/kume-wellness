@@ -58,13 +58,8 @@ export default function ServiceCard({ service }: ServiceCardProps) {
             <span className="text-2xl font-bold text-primary">
               {formatPrice(service.price)}
             </span>
-            {service.discountPrice && (
-              <div className="text-xs text-accent">
-                Martes: {formatPrice(service.discountPrice)}
-              </div>
-            )}
           </div>
-          
+
           <button
             onClick={handleAddToCart}
             className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-full text-sm hover:bg-primary/90 transition-colors"

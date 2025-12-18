@@ -23,27 +23,27 @@ export default function Services() {
     : getServicesByCategory(activeCategory);
 
   return (
-    <section id="servicios" className="py-20 bg-gray-50">
+    <section id="servicios" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
             Nuestros Servicios
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Tratamientos personalizados con productos de primera calidad y técnicas profesionales.
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-8">
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((cat) => (
             <button
               key={cat.key}
               onClick={() => setActiveCategory(cat.key)}
-              className={`px-4 py-2 rounded-full text-sm transition-colors ${
+              className={`px-6 py-3 rounded-full text-base font-semibold transition-all shadow-md ${
                 activeCategory === cat.key
-                  ? 'bg-primary text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
+                  ? 'bg-primary text-white scale-105 shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 hover:scale-105'
               }`}
             >
               {cat.label}
@@ -59,12 +59,19 @@ export default function Services() {
         </div>
 
         {/* Tuesday Promo Banner */}
-        <div className="mt-12 bg-accent/20 rounded-2xl p-6 text-center">
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">
-            Promoción Martes
+        <div className="mt-12 bg-gradient-to-r from-accent via-primary/20 to-accent rounded-2xl p-8 text-center shadow-lg border-2 border-primary/30">
+          <h3 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-2">
+            ¡Todos los martes del mes valor promocional!
           </h3>
-          <p className="text-gray-600">
-            Todos los martes disfrutá de descuentos especiales en nuestras sesiones premium.
+          <p className="text-lg text-gray-700 font-medium">
+            Consultá por tu descuento especial
+          </p>
+        </div>
+
+        {/* Cash Discount Disclaimer */}
+        <div className="mt-6 bg-white/80 rounded-xl p-4 text-center border border-gray-200">
+          <p className="text-sm text-gray-600">
+            💰 <span className="font-semibold">15% de descuento</span> en efectivo o transferencia bancaria
           </p>
         </div>
       </div>
