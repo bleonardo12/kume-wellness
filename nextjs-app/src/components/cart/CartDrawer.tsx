@@ -101,8 +101,8 @@ export default function CartDrawer() {
               Ir al Checkout
             </Link>
             
-            <p className="text-xs text-gray-500 text-center">
-              Recargo del 20% con tarjeta de crédito
+            <p className="text-xs text-gray-600 text-center">
+              💰 <span className="font-semibold">15% de descuento</span> en efectivo o transferencia bancaria
             </p>
           </div>
         )}
