@@ -1,4 +1,4 @@
-name: Deploy a VPS
+name: Deploy al VPS
 
 on:
   push:
@@ -7,41 +7,41 @@ on:
 
 jobs:
   deploy:
-    name: Deploy via SSH
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout del repositorio
-        uses: actions/checkout@v4
+      - name: Checkout del código
+        uses: actions/checkout@v3
 
-      - name: Configurar SSH agent
-        uses: webfactory/ssh-agent@v0.9.0
+      - name: Configurar SSH Agent y Clave
+        uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
-      - name: Configurar SSH para omitir verificación de host
+      - name: Registrar Host de Confianza
         run: |
           mkdir -p ~/.ssh
-          cat >> ~/.ssh/config << 'EOF'
-          Host 69.62.95.98
-            Port 2222
-            StrictHostKeyChecking no
-            UserKnownHostsFile /dev/null
-            ServerAliveInterval 30
-            ConnectTimeout 20
-          EOF
-          chmod 600 ~/.ssh/config
+          ssh-keyscan -p 2222 -H srv777726.hstgr.cloud >> ~/.ssh/known_hosts
 
-      - name: Copiar archivos via rsync
+      - name: Deploy al VPS
         run: |
-          rsync -avzr --delete \
-            -e "ssh -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
-            --exclude='.git' \
-            --exclude='.github' \
-            --exclude='.claude' \
-            --exclude='*.md' \
-            ./ root@69.62.95.98:${{ secrets.VPS_PATH }}/
+          ssh -p 2222 root@srv777726.hstgr.cloud << 'ENDSSH'
+            set -e
+            echo "📦 Iniciando deploy..."
+            cd /var/www/kume-wellness
 
-      - name: Verificar deploy
-        run: |
-          ssh root@69.62.95.98 "echo 'Deploy OK:' && date && ls ${{ secrets.VPS_PATH }}"
+            echo "🔄 Fetching cambios de main..."
+            git fetch origin main
+
+            echo "✨ Aplicando cambios..."
+            git reset --hard origin/main
+
+            echo "✅ Último commit desplegado:"
+            git log -1 --oneline
+
+            echo "🎉 Deploy completado exitosamente!"
+          ENDSSH
+
+      - name: Notificar resultado
+        if: success()
+        run: echo "✅ Deploy exitoso a srv777726.hstgr.cloud"
