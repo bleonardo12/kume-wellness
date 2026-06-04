@@ -19,13 +19,23 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
-      - name: Agregar VPS a known_hosts
-        run: ssh-keyscan -p 2222 -H 69.62.95.98 >> ~/.ssh/known_hosts
+      - name: Configurar SSH para omitir verificación de host
+        run: |
+          mkdir -p ~/.ssh
+          cat >> ~/.ssh/config << 'EOF'
+          Host 69.62.95.98
+            Port 2222
+            StrictHostKeyChecking no
+            UserKnownHostsFile /dev/null
+            ServerAliveInterval 30
+            ConnectTimeout 20
+          EOF
+          chmod 600 ~/.ssh/config
 
       - name: Copiar archivos via rsync
         run: |
           rsync -avzr --delete \
-            -e "ssh -p 2222 -o StrictHostKeyChecking=no" \
+            -e "ssh -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
             --exclude='.git' \
             --exclude='.github' \
             --exclude='.claude' \
@@ -34,4 +44,4 @@ jobs:
 
       - name: Verificar deploy
         run: |
-          ssh -p 2222 root@69.62.95.98 "echo 'Deploy OK:' && date && ls ${{ secrets.VPS_PATH }}"
+          ssh root@69.62.95.98 "echo 'Deploy OK:' && date && ls ${{ secrets.VPS_PATH }}"
