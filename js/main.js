@@ -243,14 +243,25 @@ function initReservationForm() {
 // Helper function para obtener nombre del servicio formateado
 function getServiceName(servicioValue) {
     const servicios = {
-        'sesion-holly': 'Sesión Holly (Amor Propio) - $55.000',
-        'sesion-crabapple': 'Sesión Crabapple (Anti-acné) - $60.000',
+        'sesion-holly': 'Sesión Holly (Amor Propio)',
+        'sesion-crabapple': 'Sesión Crabapple (Anti-acné)',
+        'sesion-olive': 'Sesión Olive (Dermapen +50)',
+        'sesion-star': 'Renovación Celular Star Of Bethlehem',
+        'peeling-algas': 'Peeling de Algas Vegano Rescue Remedy',
+        'anti-age-larch': 'Anti Age Wellness Larch',
+        'masajes-holisticos': 'Masajes Holísticos',
+        'masajes-descontracturantes': 'Masajes Descontracturantes',
+        'flores-bach': 'Flores de Bach',
+        'mamas-armonia-combinadas': 'Mamás en Armonía — Sesiones Combinadas',
+        'mamas-armonia-cosmetologia': 'Mamás en Armonía — Cosmetología',
+        'mamas-armonia-peeling': 'Mamás en Armonía — Peeling de Algas',
+        'mamas-armonia-masajes': 'Mamás en Armonía — Masajes',
+        'estrias': 'Evaluación de Tratamiento de Estrías',
         'dermapen': 'Dermapen',
         'hilos-colageno': 'Hilos de Colágeno',
         'fototerapia': 'Fototerapia',
         'limpiezas': 'Limpiezas Faciales',
         'dermaplaning': 'Dermaplaning',
-        'masajes': 'Masajes Holísticos',
         'podoestetica': 'Podoestética',
         'depilacion-laser': 'Jornadas de Depilación Láser'
     };
