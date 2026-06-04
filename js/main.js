@@ -99,14 +99,13 @@ function initDateRestrictions() {
         maxDate.setMonth(maxDate.getMonth() + 3);
         fechaInput.setAttribute('max', maxDate.toISOString().split('T')[0]);
 
-        // Validar que no sea domingo
+        // Bloquear Domingo (0) y Lunes (1)
         fechaInput.addEventListener('change', function() {
             const selectedDate = new Date(this.value + 'T00:00:00');
             const dayOfWeek = selectedDate.getDay();
 
-            // Si es domingo (0), mostrar error
-            if (dayOfWeek === 0) {
-                this.setCustomValidity('Los domingos estamos cerrados. Por favor, elegí otro día.');
+            if (dayOfWeek === 0 || dayOfWeek === 1) {
+                this.setCustomValidity('Atendemos de martes a sábados. Por favor elegí otro día.');
                 this.reportValidity();
                 this.value = '';
             } else {
