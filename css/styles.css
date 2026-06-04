@@ -302,9 +302,9 @@ nav.navbar.scrolled {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('../img/servicios/hilos-colageno.webp');
+    background-image: url('../img/servicios/masajes.webp');
     background-size: cover;
-    background-position: center 30%;
+    background-position: center 20%;
     background-repeat: no-repeat;
 }
 
