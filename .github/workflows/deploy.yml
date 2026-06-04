@@ -50,7 +50,8 @@ jobs:
       - name: Configurar nginx
         run: |
           scp -P 2222 nginx/kume-wellness.conf root@srv777726.hstgr.cloud:/etc/nginx/sites-available/kume-wellness
-          ssh -p 2222 root@srv777726.hstgr.cloud "ln -sf /etc/nginx/sites-available/kume-wellness /etc/nginx/sites-enabled/kume-wellness && rm -f /etc/nginx/sites-enabled/default && nginx -t && systemctl reload nginx && echo '✅ nginx recargado'"
+          scp -P 2222 nginx/espaciokume.conf root@srv777726.hstgr.cloud:/etc/nginx/sites-available/espaciokume
+          ssh -p 2222 root@srv777726.hstgr.cloud "ln -sf /etc/nginx/sites-available/kume-wellness /etc/nginx/sites-enabled/kume-wellness && ln -sf /etc/nginx/sites-available/espaciokume /etc/nginx/sites-enabled/espaciokume && rm -f /etc/nginx/sites-enabled/default && nginx -t && systemctl reload nginx && echo '✅ nginx recargado'"
 
       - name: Notificar resultado
         if: success()
